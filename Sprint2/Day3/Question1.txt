@@ -1,0 +1,9 @@
+Q):-What is the difference between a synchronized method and a synchronized block?
+
+
+Synchronized block and synchronized methods are two ways to use synchronized keywords in Java and implement mutual exclusion on critical sections of code. Since Java is mainly used to write multi-threading programs,  which present various kinds of thread-related issues like thread-safety, deadlock, and race conditions, which plagues into code mainly because of poor understanding of the synchronization mechanism provided by the Java programming language. Java provides inbuilt synchronized and volatile keywords to achieve synchronization in Java. The main difference between the synchronized method and the synchronized block is a selection of locks on which critical section is locked.
+
+
+A synchronized method depending upon whether it's a static method or non-static locks on either class level lock or object lock. A class level lock is one for each class and represented by class literal e.g. Stirng.class. The object-level lock is provided by a current object like this instance, You should never mix static and non-static synchronized methods in Java.
+
+On the other hand synchronized block locks on monitor evaluated by expression provided as a parameter to synchronized block. In the next section, we will see an example of both synchronized method and synchronized block to understand this difference better.

@@ -1,0 +1,8 @@
+What is the Difference between the sleep and join method .
+
+ans:-
+The join() method waits for a thread to die. In other words, it causes the currently running threads to stop executing until the thread it joins with completes its task.
+Join- it is used when a thread wants to wait for another thread for its execution. It's non static method.
+
+The sleep(long millis) method causes the currently executing thread to sleep for the specified number of milliseconds,
+Sleep- it is used when a thread doesn't want to do any thing for any specificed period of time. It is a static method. All threads will sleep for that particular time period whoever executes this 

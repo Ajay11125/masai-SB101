@@ -1,0 +1,10 @@
+What are the benefits of using Multithreading?
+
+ans:-
+1.improved throughput
+2.Simultaneous and fully symmetric use of multiple processors for 3.computation and I/O.
+4.Superior application responsiveness
+5.Improved server responsiveness
+6.Minimized system resource usage
+7.Program structure simplification
+8.Better communication.
