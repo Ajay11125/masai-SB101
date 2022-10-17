@@ -1,0 +1,46 @@
+Q1:- Explain the meaning of the deadlock in multithreaded application, when it can occur in
+   multithreading applications.Write one example of deadlock.
+
+Ans:-
+Deablock decribes a situation where two or more threads are blocked forever, waiting for each other.Deadlock occurs when
+multiple threads need the same locks but obtain them in a different order. A java multithreaded program may suffer from
+the deadlock condition because the synchnorized keyword causes the executing thread to block while waiting for the lock
+or monitor,associated with the specified object
+
+Example:-
+public class test{
+    public static void main(String[] args){
+            threaddemo t1=new threaddemo();
+            threaddemo2 t2=new threaddemo2();
+            t1.start();
+            t2.start();
+    }
+
+}
+public static clas threaddemo extends Thread{
+    public void run(){
+    synchnorized(Lock1){
+        sout("Thread 1:holding")
+        try{(thread.sleep(10)}
+        catch{}
+        sout("thread 1 holding")
+    }
+    synchnorized(Lock2){
+            sout("thread 2 holding")
+        }
+    }
+    }
+public static clas threaddemo2 extends Thread{
+    public void run(){
+    synchnorized(Lock2){
+        sout("Thread 1:holding")
+        try{(thread.sleep(10)}
+        catch{}
+        sout("thread 1 holding")
+    }
+    synchnorized(Lock1){
+            sout("thread 2 holding")
+        }
+    }
+    }
+
