@@ -1,0 +1,17 @@
+Q2/- What is JDBC, Write a note on JDBC driver software.
+
+Ans:-
+Java™ database connectivity (JDBC) is the JavaSoft specification of a standard application programming interface (API) that allows Java programs to access database management systems. The JDBC API consists of a set of interfaces and classes written in the Java programming language.
+
+Using these standard interfaces and classes, programmers can write applications that connect to databases, send queries written in structured query language (SQL), and process the results.
+
+Since JDBC is a standard specification, one Java program that uses the JDBC API can connect to any database management system (DBMS), as long as a driver exists for that particular DBMS.
+
+JDBC-ODBC bridge driver uses ODBC driver to connect to the database. The JDBC-ODBC bridge driver converts JDBC method calls into the ODBC function calls. Type-1 driver is also called Universal driver because it can be used to connect to any of the databases.
+
+As a common driver is used in order to interact with different databases, the data transferred through this driver is not so secured.
+The ODBC bridge driver is needed to be installed in individual client machines.
+Type-1 driver isn’t written in java, that’s why it isn’t a portable driver.
+This driver software is built-in with JDK so no need to install separately.
+It is a database independent driver.
+
