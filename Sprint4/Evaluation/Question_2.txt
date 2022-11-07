@@ -1,0 +1,45 @@
+Q2/- How many types of relationships exist among tables in the Database? Explain with some examples, and also mention how to establish these relationships among tables with examples.
+
+Ans:-
+There are three types of relationships that can Exist among tables are:-
+i)One-to-one
+ii)one-to-many
+iii)many-to-many
+
+i)one-to-one
+	In a one-to-one relatinship a record in table B(suppose a table B exist) belongs to one and one record in Table A. And a record in table A belongs to one and only record in table B.
+	
+	Example:-
+		In the relationShip between people and Adhar numbers,a person can have one and only one Adhar number,and a Adhar number belongs to one and only person.
+
+ii) one-to-many
+	In a one-to-many relationship a record in table A can have potential to belong to several records in table B. 
+	Example:-
+		Think about the relationship between order and items an order can contain many items but an item belongs to a single order.
+
+iii)Many-to-many
+	In a mony-to-many relationship,a record in tabele B can potentially belong to several records in Table A and vice versa
+	Example:-
+		the relationship between products and category a product can belongs to many category anbd a category can hace many products many with many relation.
+
+
+We can Establish realtion between tables using foreign key constraint
+foreign key(foreign_key_column_name) refernces target_table_name(primay_key_column_name);
+
+one-to-one:-
+
+create table address(
+	user_id int,
+	street varchar(30) NOT null,
+	primary key(user_id),
+	foreign key(user_id) refernces users(id) on delete cascade);
+
+many-to-many:-
+create table address(
+	user_id int,
+	street varchar(30) NOT null,
+	Book_id int Not null,
+	primary key(user_id),
+	foreign key(user_id) refernces users(id) on delete cascade,
+	foreign key(Book_id) refernces books(id) on delete cascade);
+
